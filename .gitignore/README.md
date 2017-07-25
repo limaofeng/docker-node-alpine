@@ -1,2 +1,0 @@
-# node-alpine
-node-alpine
