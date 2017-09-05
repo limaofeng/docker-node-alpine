@@ -1,12 +1,6 @@
 FROM node:6.11.1-alpine
 
-# 添加 cairo
-RUN apk add --no-cache cairo cairo-dev cairomm-dev \
-    pango pango-dev pangomm pangomm-dev \
-    libjpeg-turbo-dev giflib-dev g++ make && \
-    rm -rf /var/cache/apk/*
-
-    # 添加 bash
+# 添加 bash
 RUN apk update && apk add bash libstdc++ && \
     # 设置时区
     apk add ca-certificates && \
