@@ -12,4 +12,7 @@ RUN apk update && apk add bash libstdc++ && \
 # 设置 npm 镜像    
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 
+# 安装 yarn
+RUN cnpm install -g yarn
+
 ENV LANG="zh_CN.UTF-8"
