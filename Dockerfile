@@ -1,4 +1,4 @@
-FROM node:6.11.1-alpine
+FROM node:8.9.4-alpine
 
 # 添加 bash
 RUN apk update && apk add bash libstdc++ && \
@@ -10,6 +10,6 @@ RUN apk update && apk add bash libstdc++ && \
     rm -rf /var/cache/apk/*
 
 # 设置 npm 镜像    
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
+RUN npm config set registry https://registry.npm.taobao.org
 
 ENV LANG="zh_CN.UTF-8"
